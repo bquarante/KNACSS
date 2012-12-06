@@ -225,33 +225,33 @@ input[type="submit"] {
 		margin: auto !important;
 	}
 	.print {
-		display: block; /* affichage des éléments de classe print */
+		display: block; /* displaying .print elements */
 	}
 	p,
 	blockquote {
-		orphans: 3; /* pas de ligne seule en bas */
-		widows: 3; /* pas de ligne seule en haut */
+		orphans: 3; /* no orphans */
+		widows: 3; /* no widows */
 	}
 	blockquote,
 	ul,
 	ol {
-		page-break-inside: avoid; /* pas de coupure dans ces élements */
+		page-break-inside: avoid; /* no breaks inside these elements */
 	}
 	h1 {
-		page-break-before: always; /* chaque titre commence sur une nouvelle page */
+		page-break-before: always; /* page break before main headers */
 	}
 	h1,
 	h2,
 	h3,
 	caption {
-		page-break-after: avoid; /* pas de saut après ces éléments */
+		page-break-after: avoid; /* no breaks after these elements */
 	}
 	a {
 		color: #000 !important;
 		text-decoration: underline !important;
 	}
 	a[href]:after {
-		content: " (" attr(href) ")"; /* affichage des URL des liens */
+		content: " (" attr(href) ")"; /* displaying URLs */
 	}
 }
 
