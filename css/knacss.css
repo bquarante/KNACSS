@@ -439,11 +439,11 @@ label {
 
 /* box-sizing for IE6/IE7 */
 /* @source https://github.com/Schepp/box-sizing-polyfill */
-/*
+
 .ie67 * {
 	behavior: url(/js/boxsizing.htc);
 }
-*/
+
 
 /* ----------------------------- */
 /* ==print */
