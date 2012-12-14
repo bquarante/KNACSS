@@ -10,12 +10,18 @@
 	<!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="css/knacss.css" media="all">
 	<link rel="stylesheet" href="css/knacss-garni.css" media="all">
+	<link rel="stylesheet" href="css/nav.css" media="all">
 	<link rel="stylesheet" href="css/style.css" media="all">
 	<!--<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>-->
-
+	<script type="text/javascript">
+		function scrollTo(hash) {
+		    location.hash = "#" + hash;
+		   // alert('yo');
+		}
+	</script>
 </head>
 <body class="mw960p center">
-	<header class="line mod">
+	<header class="line">
 		<div class="mod item">
 			<img src="" class="left" width="80" height="150" alt="">
 			<div class="item">
@@ -23,8 +29,20 @@
 			</div>
 		</div>
 	</header>
-	<div class="line mod">
+	<nav id="navigation" class="line mod" role="navigation">
+			<label for="toggle-menu" data-icon="≡" title="menu" role="navigation" onclick=""></label><input type="checkbox" id="toggle-menu">
+			<ul>
+				<li><a href="#">A propos</a></li>
+				<li><a href="#">Player</a></li>
+				<li><a href="#matos">Matériel</a></li>
+				<li><a href="#">Tarifs</a></li>
+				<li><a href="#">Enregistrement nomade</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+	</nav>
+	<div class="line">
 		<div class="mod left item w70 m50 t100">
+			<h3 class="h5-like">A propos</h3>
 			<p>"Dans un monde où triomphe la quantité (toujours plus de groupes, plus de promo, de concerts, de volume, de mp3 etc...), mais avec moins de budget et moins de temps, peut-on encore accéder à la qualité ? Loin de la compression à outrance et de la guerre du volume, je pense que tout artiste doit pouvoir offrir à sa musique un enregistrement qui retranscrit fidèlement l'intensité, la ferveur et le cœur qu'il met à la jouer. Et ce, à chaque écoute.</p>
 			<p>Tout mon travail est là.<br />En m’appuyant sur un matériel délibérément inscrit dans l’histoire du son, je propose l’accès à une réelle identité sonore.”</p>
 			<p><a href="http://www.coreandco.fr/interviews/sylvain-biguet-200.html">Pour en savoir plus : http://www.coreandco.fr/interviews/sylvain-biguet-200.html</a> </p>
@@ -33,14 +51,14 @@
 			</div>
 		</div>
 		<div class="mod left w30 m50 t100">
-			<h4>Player</h4>
+			<h3 class="h5-like">Player</h3>
 			<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265791&amp;auto_play=false&amp;show_artwork=true&amp;color=61371f"></iframe>
 			<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265787&amp;auto_play=false&amp;show_artwork=true&amp;color=61371f"></iframe>
 		</div>
 	</div>
-	<div class="line mod">
-		
-			<ul class="mod left w50 m50 t100"><!-- matos -->
+	<div class="line mod" id="matos">
+			<h3 class="h5-like">Matériel</h3>
+			<ul class="mod left w50 m50 t100 mt0 mb0 pt0 pb0 "><!-- matos -->
 				<li>Recorder
 					<ul>
 						<li>Magix Samplitude 11 Pro</li>
@@ -89,7 +107,7 @@
 					</ul>
 				</li>
 			</ul>
-			<ul class="mod left w50 m50 t100">
+			<ul class="mod left w50 m50 t100 mt0 mb0 pt0 pb0">
 				<li>Micros
 					<ul>
 						<li>Wunder Audio CM7 (neumann U47 long body reissue)</li>
@@ -127,9 +145,16 @@
 			</ul>
 		
 	</div>
+	<div class="line mod">
+		<h3 class="h5-like">Tarifs</h3>
+		<p class="w30">Attention : les tarifs indiqués sur cette page sont purement indicatifs. Me contacter directement ici pour obtenir un devis.</p>
+		<h4 class="h6-like">Prises de son</h4>
+		<strong>Studio nomade :</strong>
+	</div>
 	<footer class="line mod">
 		<p>footer</p>
 	</footer>
+	
 </body>
 </html>
 	<!-- <div class="line">
