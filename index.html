@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700, 300' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width">
 	<!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="css/knacss.css" media="all">
@@ -13,192 +13,204 @@
 	<link rel="stylesheet" href="css/nav.css" media="all">
 	<link rel="stylesheet" href="css/style.css" media="all">
 	<!--<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>-->
-	<script type="text/javascript">
-		function scrollTo(hash) {
-		    location.hash = "#" + hash;
-		   // alert('yo');
-		}
-	</script>
+	<!--<script src="js/smoothScroll.js" type="text/javascript"></script>-->
 </head>
-<body class="mw960p center">
-	<header class="line">
-		<div class="mod item">
-			<img src="" class="left" width="80" height="150" alt="">
-			<div class="item">
-				<h1 class="mb0 mt0">Sylvain Biguet</h1><h2 class="h6-like mt0 mb0">ingénieur du son</h2>
+<body>
+	<div class="mw960p mod center" id="wrapper">
+		<header class="line">
+			<div class="mod item">
+				<img src="" class="left" width="80" height="150" alt="">
+				<div class="item">
+					<h1 class="mb0 mt0">Sylvain Biguet</h1><h2 class="h6-like mt0 mb0">ingénieur du son</h2>
+				</div>
+			</div>
+		</header>
+		<nav id="navigation" class="line mod" role="navigation">
+				<label for="toggle-menu" data-icon="≡" title="menu" role="navigation" onclick=""></label><input type="checkbox" id="toggle-menu">
+				<ul>
+					<li><a href="#apropos">A propos</a></li>
+					<li><a href="#player">Player</a></li>
+					<li><a href="#matos">Matériel</a></li>
+					<li><a href="#tarifs">Tarifs</a></li>
+					<li><a href="#enregistrementnomade">Enregistrement nomade</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+		</nav>
+		<div class="line">
+			<div class="mod left item w70 m50 t100" id="apropos">
+				<h3 class="h4-like">A propos</h3>
+				<img src="images/head-apropos.jpg" alt="" />
+				<p>"Dans un monde où triomphe la quantité (toujours plus de groupes, plus de promo, de concerts, de volume, de mp3 etc...), mais avec moins de budget et moins de temps, peut-on encore accéder à la qualité ?</p>
+				<p>Loin de la compression à outrance et de la guerre du volume, je pense que tout artiste doit pouvoir offrir à sa musique un enregistrement qui retranscrit fidèlement l'intensité, la ferveur et le cœur qu'il met à la jouer, et ce, à chaque écoute. <strong>Tout mon travail est là. En m’appuyant sur un matériel délibérément inscrit dans l’histoire du son, je propose l’accès à une réelle identité sonore."</strong></p>
+				<p>Pour en savoir plus, lisez cette interview : <a href="http://www.coreandco.fr/interviews/sylvain-biguet-200.html">http://www.coreandco.fr/interviews/sylvain-biguet-200.html</a> </p>
+				<div class="embed-container">
+	    			<iframe src="http://player.vimeo.com/video/34607707?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=61371f" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				</div>
+			</div>
+			<div class="mod left w30 m50 t100" id="player">
+				<h3 class="h4-like">Player</h3>
+				<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265791&amp;auto_play=false&amp;show_artwork=true&amp;color=61371f"></iframe>
+				<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265787&amp;auto_play=false&amp;show_artwork=true&amp;color=61371f"></iframe>
 			</div>
 		</div>
-	</header>
-	<nav id="navigation" class="line mod" role="navigation">
-			<label for="toggle-menu" data-icon="≡" title="menu" role="navigation" onclick=""></label><input type="checkbox" id="toggle-menu">
-			<ul>
-				<li><a href="#">A propos</a></li>
-				<li><a href="#">Player</a></li>
-				<li><a href="#matos">Matériel</a></li>
-				<li><a href="#">Tarifs</a></li>
-				<li><a href="#">Enregistrement nomade</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-	</nav>
-	<div class="line">
-		<div class="mod left item w70 m50 t100">
-			<h3 class="h5-like">A propos</h3>
-			<p>"Dans un monde où triomphe la quantité (toujours plus de groupes, plus de promo, de concerts, de volume, de mp3 etc...), mais avec moins de budget et moins de temps, peut-on encore accéder à la qualité ? Loin de la compression à outrance et de la guerre du volume, je pense que tout artiste doit pouvoir offrir à sa musique un enregistrement qui retranscrit fidèlement l'intensité, la ferveur et le cœur qu'il met à la jouer. Et ce, à chaque écoute.</p>
-			<p>Tout mon travail est là.<br />En m’appuyant sur un matériel délibérément inscrit dans l’histoire du son, je propose l’accès à une réelle identité sonore.”</p>
-			<p><a href="http://www.coreandco.fr/interviews/sylvain-biguet-200.html">Pour en savoir plus : http://www.coreandco.fr/interviews/sylvain-biguet-200.html</a> </p>
-			<div class="embed-container">
-    			<iframe src="http://player.vimeo.com/video/34607707?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=b38042" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		<div class="line mod" id="matos">
+				<h3 class="h4-like">Matériel</h3>
+				<img src="images/head-materiel.jpg" alt="" />
+				<ul class="mod left w50 m50 t100 mt0 mb0 pb0 pl0 pr0 "><!-- matos -->
+					<li>Recorder
+						<ul>
+							<li>Magix Samplitude 11 Pro</li>
+						</ul>
+					</li>
+					<li>Interfaces
+						<ul>
+							<li>Carte son RME Fireface 800</li>
+							<li>Convertisseur AD/DA 24 canaux SSL Alphalink AX</li>
+						</ul>
+					</li>
+					<li>Mixer
+						<ul>
+							<li>Sommateur analogique 16 canaux API</li>
+							<li>API 8200 x2</li>
+							<li>API 7800</li>
+							<li>Phoenix Audio NICERIZER 8</li>
+						</ul>
+					</li>
+					<li>Monitoring
+						<ul>
+							<li>Dynaudio Acoustics BM15A</li>
+							<li>Adam A7</li>
+						</ul>
+					</li>
+					<li>Preamps/DI's
+						<ul>
+							<li>Summit TPA200B (tube, stéréo) x1</li>
+							<li>Aurora Audio GTP8 (Neve 1073 preamps reissue)</li>
+							<li>API 512C x6</li>
+							<li>DI Avalon U5 x3</li>
+						</ul>
+					</li>
+					<li>Equalizers
+						<ul>
+							<li>Millenia NSEQ2 (tube, stéréo) x1</li>
+							<li>Summit EQP200B (tube, stereo) x1</li>
+							<li>API 550B x2</li>
+						</ul>
+					</li>
+					<li>Processeurs de dynamique
+						<ul>
+							<li>Chiswick Reach Stereo Valve Compressor (Fairchild) (tube, stereo) x1</li>
+							<li>Manley ELOP (tube, stéréo) x1</li>
+							<li>Anthony De Maria Labs AD1000 (tube, mono) x1</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="mod left w50 m50 t100 mt0 mb0 pb0 pl0 pr0">
+					<li>Micros
+						<ul>
+							<li>Wunder Audio CM7 (neumann U47 long body reissue)</li>
+							<li>Royer R121 (ruban, appairées) x2</li>
+							<li>AKG C414B ULS x2</li>
+							<li>AKG C451E (capsules cardio et mono) x2</li>
+							<li>Shure SM57 x5</li>
+							<li>Shure SM58 x4</li>
+							<li>Shure Beta98 x3</li>
+							<li>Shure Beta52 x1</li>
+							<li>Shure Beta91 x1</li>
+							<li>Beyerdynamic M88 x1</li>
+							<li>Sennheiser MD421 x1</li>
+						</ul>
+					</li>
+					<li>Backline
+						<ul>
+							<li>Batterie DW fûts Maple Keller 24”x16”, 12”x11”, 16”x14”</li>
+							<li>Caisse claire Sonor Artist Brass 14”x5,5”</li>
+							<li>Tête Marsahall JCM 800 Mk2</li>
+							<li>Baffle 4x10” Rickenbaker openback</li>
+						</ul>
+					</li>
+					<li>Divers
+						<ul>
+							<li>Presonus Monitor Station</li>
+							<li>Boitier de réamplification Radial X-AMP x2</li>
+							<li>Trigger de grosse caisse Roland RT7K x1</li>
+							<li>Trigger de caisse claire ddrum DDTS Pro x1</li>
+							<li>Préampli casques 6 canaux Furman HA6B</li>
+							<li>Préampli casques 4 canaux Presonus HB4</li>
+							<li>Casques Beyerdynamic DT770 x2</li>
+						</ul>
+					</li>
+				</ul>
+			
+		</div>
+		<div class="line mod" id="tarifs">
+			<h3 class="h4-like">Tarifs</h3>
+			<img src="images/head-tarifs.jpg" alt="" />
+			<p class="small">Attention : les tarifs indiqués sur cette page sont purement indicatifs. Me contacter directement ici pour obtenir un devis.</p>
+			<div class="mod left w50 m50 t100 pt0 pb0 pl0">
+				<h4 class="h6-like">Prises de son</h4>
+				<p><strong>Studio nomade :</strong><br />
+				200€/jour. (Suivant la longueur du projet, ou dans le cadre d’un contrat de coproduction, les prix peuvent être dégressifs, me contacter directement pour obtenir un devis). Déplacement sous la responsabilité logitique de l’ingénieur du son, à la charge du client (défraiement du transport).</p>
+				<p><strong>Studio fixe :</strong><br />
+				300€/jour, tarif fixe, non dégressif, compris la mise à disposition des 2 ingénieurs du son ainsi que de leur matériel.</p>
+				<p><strong>Hébergement :</strong><br />mise à disposition de couchages, cuisine et salle de bain, draps et repas non compris. Studio de La Senelle : 10€/nuitée par musicien. Moulin de Favry : 60€/nuitée forfait groupe. </p><p><strong>Location de backline :</strong><br /> 50€/ampli</p>
+			</div>
+			<div class="mod left w50 m50 t100 pt0 pb0 pl0">
+				<h4 class="h6-like">Mixage</h4>
+				<p>200€/jour. (Possibilité de tarifs dégressifs aussi).</p>
+				<h4 class="h6-like">Mastering</h4>
+					<strong>Mastering standard :</strong><br />
+					<ul>
+						<li>40€/morceau les 5 premières chansons</li>
+						<li>30€/morceau à partir du 6ème</li>
+						<li>50€/montage de l’album (ordre des morceaux, espacement entre les titres, dénomination des indexs, etc.)</li>
+						
+					</ul>
+					<strong>Mastering par stems :</strong><br />
+					<ul>
+						<li>60€/morceau les 5 premières chansons</li>
+						<li>40€/morceau à partir du 6ème</li>
+						<li>50€/montage de l’album</li>
+					</ul>
 			</div>
 		</div>
-		<div class="mod left w30 m50 t100">
-			<h3 class="h5-like">Player</h3>
-			<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265791&amp;auto_play=false&amp;show_artwork=true&amp;color=61371f"></iframe>
-			<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265787&amp;auto_play=false&amp;show_artwork=true&amp;color=61371f"></iframe>
+		<div class="line mod" id="enregistrementnomade">
+			<h3 class="h4-like">Enregistrement nomade</h3>
+			<img src="images/head-enregistrementnomade.jpg" alt="" />
+			<p>De nos jours, trois options se présentent aux musiciens qui veulent enregistrer leur musique :</p>
+			<div class="line">
+				<div class="mod left w33 pl0">
+				<strong>Le studio professionnel</strong><br />où la notoriété et le matériel sont au rendez-vous. Mais les tarifs sont la plupart du temps hors de portée des musiciens autoproduits ou des petites structures de production, à moins de louer les lieux pour un laps de temps souvent trop court, parfois même sans ingénieur du son qui sache exploiter les installations.
+				</div>
+				<div class="mod left w33 pl0">
+					<strong>Le home studio amélioré.</strong><br />Structure beaucoup plus économique dont le résultat, faute d’un équipement et d’une expérience suffisantes, ne dépassera pas un enregistrement fait à la maison. Loin de la plus value légitimement attendue par les artistes.
+				</div>
+				<div class="mod left w33 pl0">
+					<strong>La maison.</strong><br />Cette solution a pour avantage de permettre aux musiciens de disposer de tout le temps nécessaire. Mais dans la plupart des cas cette option, faute d’un équipement et d’une expérience suffisantes, ne permet pas de dépasser de bonnes maquettes.
+				</div>
+			</div>
+			<div class="line">
+				<div class="left w80">
+					<p>D’un autre côté, le développement du home studio et de la MAO apporte aux musiciens de solides connaissances en matière d’enregistrement, ce qui ne peut qu’enrichir leurs échanges avec l’ingénieur du son lors de vraies séances studio, surtout justement lorsque des maquettes ont été réalisés préalablement à la maison.</p>
+					<p><strong>Sylvain BIGUET propose une solution d’enregistrement nomade, conciliant les avantages du home studio et du studio professionnel.</strong> Son matériel réellement haut de gamme, son savoir faire reconnu et son expérience importante permettent d’apporter qualité, chaleur et transparence dans n’importe quel lieu (maisons individuelles, salles de spectacles, studios, greniers, théâtres…) tout en proposant des tarifs qui ne sont pas alourdis par de coûteux investissements immobiliers.</p>
+				</div>
+			</div>
 		</div>
+		<footer class="line mod" id="contact">
+			<h3 class="h4-like">Contact</h3>
+			<!-- <img src="images/head-contact.jpg" alt="" /> -->
+			<div class="line">
+				<div class="mod left pl0">
+					<strong>Email : </strong><a href="mailto:sylvain.biguet@gmail.com">sylvain.biguet@gmail.com</a><br />
+					<strong>Tel : </strong>06 61 38 27 05
+				</div>
+				<div class="mod right pl0 pr0">
+					<a href="https://www.facebook.com/pages/Sylvain-Biguet-OFFICIAL/249872931725210" target="_blank" class="icon facebook" title="Sylvain Biguet sur Facebook"></a>
+					<a href="https://plus.google.com/117750569154104176336/posts" target="_blank" class="icon googleplus" title="Sylvain Biguet sur Google+"></a>
+					<a href="https://soundcloud.com/sylvainbiguet/sets" target="_blank" class="icon soundcloud" title="Sylvain Biguet sur Soundcloud"></a>
+				</div>
+			</div>
+		</footer>
 	</div>
-	<div class="line mod" id="matos">
-			<h3 class="h5-like">Matériel</h3>
-			<ul class="mod left w50 m50 t100 mt0 mb0 pt0 pb0 "><!-- matos -->
-				<li>Recorder
-					<ul>
-						<li>Magix Samplitude 11 Pro</li>
-					</ul>
-				</li>
-				<li>Interfaces
-					<ul>
-						<li>Carte son RME Fireface 800</li>
-						<li>Convertisseur AD/DA 24 canaux SSL Alphalink AX</li>
-					</ul>
-				</li>
-				<li>Mixer
-					<ul>
-						<li>Sommateur analogique 16 canaux API</li>
-						<li>API 8200 x2</li>
-						<li>API 7800</li>
-						<li>Phoenix Audio NICERIZER 8</li>
-					</ul>
-				</li>
-				<li>Monitoring
-					<ul>
-						<li>Dynaudio Acoustics BM15A</li>
-						<li>Adam A7</li>
-					</ul>
-				</li>
-				<li>Preamps/DI's
-					<ul>
-						<li>Summit TPA200B (tube, stéréo) x1</li>
-						<li>Aurora Audio GTP8 (Neve 1073 preamps reissue)</li>
-						<li>API 512C x6</li>
-						<li>DI Avalon U5 x3</li>
-					</ul>
-				</li>
-				<li>Equalizers
-					<ul>
-						<li>Millenia NSEQ2 (tube, stéréo) x1</li>
-						<li>Summit EQP200B (tube, stereo) x1</li>
-						<li>API 550B x2</li>
-					</ul>
-				</li>
-				<li>Processeurs de dynamique
-					<ul>
-						<li>Chiswick Reach Stereo Valve Compressor (Fairchild) (tube, stereo) x1</li>
-						<li>Manley ELOP (tube, stéréo) x1</li>
-						<li>Anthony De Maria Labs AD1000 (tube, mono) x1</li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="mod left w50 m50 t100 mt0 mb0 pt0 pb0">
-				<li>Micros
-					<ul>
-						<li>Wunder Audio CM7 (neumann U47 long body reissue)</li>
-						<li>Royer R121 (ruban, appairées) x2</li>
-						<li>AKG C414B ULS x2</li>
-						<li>AKG C451E (capsules cardio et mono) x2</li>
-						<li>Shure SM57 x5</li>
-						<li>Shure SM58 x4</li>
-						<li>Shure Beta98 x3</li>
-						<li>Shure Beta52 x1</li>
-						<li>Shure Beta91 x1</li>
-						<li>Beyerdynamic M88 x1</li>
-						<li>Sennheiser MD421 x1</li>
-					</ul>
-				</li>
-				<li>Backline
-					<ul>
-						<li>Batterie DW fûts Maple Keller 24”x16”, 12”x11”, 16”x14”</li>
-						<li>Caisse claire Sonor Artist Brass 14”x5,5”</li>
-						<li>Tête Marsahall JCM 800 Mk2</li>
-						<li>Baffle 4x10” Rickenbaker openback</li>
-					</ul>
-				</li>
-				<li>Divers
-					<ul>
-						<li>Presonus Monitor Station</li>
-						<li>Boitier de réamplification Radial X-AMP x2</li>
-						<li>Trigger de grosse caisse Roland RT7K x1</li>
-						<li>Trigger de caisse claire ddrum DDTS Pro x1</li>
-						<li>Préampli casques 6 canaux Furman HA6B</li>
-						<li>Préampli casques 4 canaux Presonus HB4</li>
-						<li>Casques Beyerdynamic DT770 x2</li>
-					</ul>
-				</li>
-			</ul>
-		
-	</div>
-	<div class="line mod">
-		<h3 class="h5-like">Tarifs</h3>
-		<p class="w30">Attention : les tarifs indiqués sur cette page sont purement indicatifs. Me contacter directement ici pour obtenir un devis.</p>
-		<h4 class="h6-like">Prises de son</h4>
-		<strong>Studio nomade :</strong>
-	</div>
-	<footer class="line mod">
-		<p>footer</p>
-	</footer>
-	
 </body>
 </html>
-	<!-- <div class="line">
-		<aside class="mod left w60 m50 t100">
-			<p>Ce bloc doit occuper :</p>
-			<ul>
-				<li>20% de la largeur sur écran large (.w20)</li>
-				<li>33% de la largeur sur écran moyen (.m33)</li>
-				<li>100% de la largeur sur petit écran (.t100)</li>
-			</ul>
-		</aside>
-		
-		<div class="mod item left content w40 m50 t100">
-			<p>Ce bloc doit occuper :</p>
-			<ul>
-				<li>60% de la largeur sur écran large (.w60)</li>
-				<li>33% de la largeur sur écran moyen (.m33)</li>
-				<li>100% de la largeur sur petit écran (.t100)</li>
-			</ul>
-		</div>
-	</div> -->
-
-<!-- <div class="line">
-		<aside class="mod left w20">
-			<p>aside</p>
-			<p>aside</p>
-			<p>aside</p>
-		</aside>
-		<aside class="mod left w10">
-			<p>aside</p>
-			<p>aside</p>
-			<p>aside</p>
-			<p>aside</p>
-			<p>aside</p>
-			<p>aside</p>
-			<p>aside</p>
-		</aside>
-		<div class="content mod item">
-			<h1>Lorem Elsass ipsum</h1>
-			<img src="img/martine.jpg" class="left" width="60" alt="">
-			<div class="item">
-				<p>Lorem Elsass ipsum réchime amet non Choucroute knack tchao bissame hopla. Wotch a kofee avec ton BibalaekaesSalat et ta wurscht ?</p>
-				<p>Yeuh non che suis au réchime, je ne mange plus que des Grumbeere light et che fais de la chym avec Chulien. Tiens, un Picon sur le comptoir.</p>
-				<p>Allez tchao bissame !</p>
-			</div>
-		</div>
-	</div> -->

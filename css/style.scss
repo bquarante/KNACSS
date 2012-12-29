@@ -1,0 +1,16 @@
+@import "knacss.css";
+@import "nav.css";
+
+$font1 : 'Lato', sans-serif;
+
+body {
+	font-family : $font1;
+}
+@media (max-width: 640px) {
+	iframe {
+		height: 224px;
+	}
+}
+iframe {
+	height: 300px;
+}

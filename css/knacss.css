@@ -205,7 +205,7 @@ a img { border: 0; }
 .line {}
 
 /* module, contains floats */
-.mod { padding: 14px; }
+.mod { padding: 18px; } /*.mod { padding: 14px; }*/
 
 /* generaly inside .mod, can contain .item */
 .items {}
