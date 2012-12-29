@@ -1,5 +1,5 @@
 body {
-  color: #61371f; /*#555;*/
+  color: #702116; /*#555;*/
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
@@ -15,11 +15,11 @@ body {
   }
 }
 ::selection {
-  background: #61371f; /* Safari */
+  background: #702116; /* Safari */
   color: #ffffff;
   }
 ::-moz-selection {
-  background: #61371f; /* Safari */
+  background: #702116; /* Safari */
   color: #ffffff; 
 }
 h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
   text-transform: uppercase;
 }
 .h4-like {
-  background: #61371f;
+  background: #702116;
   color: #fff;
   padding: 5px 5px 5px 10px;
 }
@@ -47,7 +47,7 @@ a {
  text-decoration: none;
 }
 a:hover {
-  background: #61371f;
+  background: #702116;
   color: #fff;
 }
 @media (max-width: 640px) {
