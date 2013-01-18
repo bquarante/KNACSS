@@ -16,16 +16,15 @@
 	<!--<script src="js/smoothScroll.js" type="text/javascript"></script>-->
 </head>
 <body>
-	<div class="mw960p mod center" id="wrapper">
-		<header class="line">
-			<div class="mod item">
-				<img src="" class="left" width="80" height="150" alt="">
+	<div class="mw960p center" >
+		<header role="banner" class="line mod">
+			<div class="line mod">
+				<!-- <img src="" class="left" width="80" height="150" alt=""> -->
 				<div class="item">
 					<h1 class="mb0 mt0">Sylvain Biguet</h1><h2 class="h6-like mt0 mb0">ingénieur du son</h2>
 				</div>
 			</div>
-		</header>
-		<nav id="navigation" class="line mod" role="navigation">
+			<nav id="navigation" class="line mod" role="navigation">
 				<label for="toggle-menu" data-icon="≡" title="menu" role="navigation" onclick=""></label><input type="checkbox" id="toggle-menu">
 				<ul>
 					<li><a href="#apropos">/A propos</a></li>
@@ -35,7 +34,11 @@
 					<li><a href="#enregistrementnomade">/Enregistrement nomade</a></li>
 					<li><a href="#contact">/Contact</a></li>
 				</ul>
-		</nav>
+			</nav>
+		</header>
+		
+	</div>
+	<div class="mw960p mod center" id="wrapper">
 		<div class="line">
 			<div class="mod left item w70 m50 t100" id="apropos">
 				<h3 class="h4-like">/A propos</h3>
@@ -54,9 +57,11 @@
 			</div>
 		</div>
 		<div class="line mod" id="matos">
-				<h3 class="h4-like">/Matériel</h3>
-				<img src="images/head-materiel.jpg" alt="" />
-				<ul class="mod left w50 m50 t100 mt0 mb0 pb0 pl0 pr0 "><!-- matos -->
+				<div class="line">
+					<h3 class="h4-like">/Matériel</h3>
+					<img src="images/head-materiel.jpg" alt="" />
+				</div>
+				<ul class="mod left w50 m50 t100"><!-- matos -->
 					<li>Recorder
 						<ul>
 							<li>Magix Samplitude 11 Pro</li>
@@ -105,7 +110,7 @@
 						</ul>
 					</li>
 				</ul>
-				<ul class="mod left w50 m50 t100 mt0 mb0 pb0 pl0 pr0">
+				<ul class="mod left w50 m50 t100 ">
 					<li>Micros
 						<ul>
 							<li>Wunder Audio CM7 (neumann U47 long body reissue)</li>
@@ -144,21 +149,23 @@
 			
 		</div>
 		<div class="line mod" id="tarifs">
-			<h3 class="h4-like">/Tarifs</h3>
-			<img src="images/head-tarifs.jpg" alt="" />
-			<p class="small">Attention : les tarifs indiqués sur cette page sont purement indicatifs. Me contacter directement ici pour obtenir un devis.</p>
-			<div class="mod left w50 m50 t100 pt0 pb0 pl0">
+			<div class="line">
+				<h3 class="h4-like">/Tarifs</h3>
+				<img src="images/head-tarifs.jpg" alt="" />
+				<p class="small">Attention : les tarifs indiqués sur cette page sont purement indicatifs. Me contacter directement ici pour obtenir un devis.</p>
+			</div>
+			<aside class="mod left w50 m50 t100">
 				<h4 class="h6-like">Prises de son</h4>
 				<p><strong>Studio nomade :</strong><br />
 				200€/jour. (Suivant la longueur du projet, ou dans le cadre d’un contrat de coproduction, les prix peuvent être dégressifs, me contacter directement pour obtenir un devis). Déplacement sous la responsabilité logitique de l’ingénieur du son, à la charge du client (défraiement du transport).</p>
 				<p><strong>Studio fixe :</strong><br />
 				300€/jour, tarif fixe, non dégressif, compris la mise à disposition des 2 ingénieurs du son ainsi que de leur matériel.</p>
 				<p><strong>Hébergement :</strong><br />mise à disposition de couchages, cuisine et salle de bain, draps et repas non compris. Studio de La Senelle : 10€/nuitée par musicien. Moulin de Favry : 60€/nuitée forfait groupe. </p><p><strong>Location de backline :</strong><br /> 50€/ampli</p>
-			</div>
-			<div class="mod left w50 m50 t100 pt0 pb0 pl0">
+			</aside>
+			<aside class="mod left w50 m50 t100">
 				<h4 class="h6-like">Mixage</h4>
 				<p>200€/jour. (Possibilité de tarifs dégressifs aussi).</p>
-				<h4 class="h6-like">Mastering</h4>
+				<h4 class="h6-like mt0">Mastering</h4>
 					<strong>Mastering standard :</strong><br />
 					<ul>
 						<li>40€/morceau les 5 premières chansons</li>
@@ -172,22 +179,22 @@
 						<li>40€/morceau à partir du 6ème</li>
 						<li>50€/montage de l’album</li>
 					</ul>
-			</div>
+			</aside>
 		</div>
 		<div class="line mod" id="enregistrementnomade">
 			<h3 class="h4-like">/Enregistrement nomade</h3>
 			<img src="images/head-enregistrementnomade.jpg" alt="" />
 			<p>De nos jours, trois options se présentent aux musiciens qui veulent enregistrer leur musique :</p>
-			<div class="line">
-				<div class="mod left w33 pl0">
+			<div class="line gut3">
+				<aside class="mod left">
 				<strong>Le studio professionnel</strong><br />où la notoriété et le matériel sont au rendez-vous. Mais les tarifs sont la plupart du temps hors de portée des musiciens autoproduits ou des petites structures de production, à moins de louer les lieux pour un laps de temps souvent trop court, parfois même sans ingénieur du son qui sache exploiter les installations.
-				</div>
-				<div class="mod left w33 pl0">
+				</aside>
+				<aside class="mod left">
 					<strong>Le home studio amélioré.</strong><br />Structure beaucoup plus économique dont le résultat, faute d’un équipement et d’une expérience suffisantes, ne dépassera pas un enregistrement fait à la maison. Loin de la plus value légitimement attendue par les artistes.
-				</div>
-				<div class="mod left w33 pl0">
+				</aside>
+				<aside class="mod left">
 					<strong>La maison.</strong><br />Cette solution a pour avantage de permettre aux musiciens de disposer de tout le temps nécessaire. Mais dans la plupart des cas cette option, faute d’un équipement et d’une expérience suffisantes, ne permet pas de dépasser de bonnes maquettes.
-				</div>
+				</aside>
 			</div>
 			<div class="line">
 				<div class="left w80">
@@ -200,13 +207,13 @@
 			<h3 class="h4-like">/Contact</h3>
 			<!-- <img src="images/head-contact.jpg" alt="" /> -->
 			<div class="line">
-				<div class="mod left pl0">
+				<div class="left pl0">
 					<strong>Email : </strong><a href="mailto:sylvain.biguet@gmail.com">sylvain.biguet@gmail.com</a><br />
 					<strong>Tel : </strong>06 61 38 27 05
 				</div>
-				<div class="mod right pl0 pr0">
+				<div class="item right pl0 pr0">
 					<a href="https://www.facebook.com/pages/Sylvain-Biguet-OFFICIAL/249872931725210" target="_blank" class="icon facebook" title="Sylvain Biguet sur Facebook"></a>
-					<a href="https://plus.google.com/117750569154104176336/posts" target="_blank" class="icon googleplus" title="Sylvain Biguet sur Google+"></a>
+					<a href="https://plus.google.com/117750569154104176336/posts" target="_blank" class="icon googleplus" title="Sylvain Biguet sur GooglePlus"></a>
 					<a href="https://soundcloud.com/sylvainbiguet/sets" target="_blank" class="icon soundcloud" title="Sylvain Biguet sur Soundcloud"></a>
 				</div>
 			</div>
