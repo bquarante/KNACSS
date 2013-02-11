@@ -2,7 +2,6 @@ KNACSS
 ======
 
 Projet en ligne : <http://www.knacss.com/>
-
 Téléchargement : <https://github.com/raphaelgoetter/KNACSS>
 
 KNACSS est une feuille de style CSS minimaliste, responsive et extensible pour débuter une intégration HTML / CSS,
