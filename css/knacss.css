@@ -12,10 +12,10 @@ html {
 	font-size: 62.5%;
 }
 body {
-	background-color: #fff;
+	background-color: #000;
 	color: #000;
-	font-family: "Century Gothic", helvetica, arial, sans-serif;
-	font-size: 1.4em; /* equiv 14px */
+	font-family: arial, sans-serif;
+	/*font-size: 1.4em; /* equiv 14px */*/
 	line-height: 1.5; /* adapt to your design */
 }
 
@@ -45,12 +45,12 @@ h1, .h1-like {
 	line-height: 1.6154em;
 	margin: .8077em 0 0 0;
 }
-h2, .h2-like {
-	font-size: 1.7143em; /* equiv 24px */
+/*h2, .h2-like {
+	font-size: 1.7143em; 
 	font-weight: normal;
 	line-height: 1.75em;
 	margin: .875em 0 0 0;
-}
+}*/
 h3, .h3-like {
 	font-size: 1.5714em; /* equiv 22px */
 	font-weight: normal;
@@ -256,7 +256,7 @@ img.left, img.right {
 .txtleft   { text-align: left; }
 .txtright  { text-align: right; }
 .txtcenter { text-align: center; }
-
+.just {text-align: justify;}
 /* just inline-block */
 .inbl {
 	display: inline-block;
@@ -800,9 +800,24 @@ table td {
 }
 
 
+/*----------------------------------------------------------------------------------*/
+html {
 
-
-
+}
+body {
+	font-family: 'Arvo', sans-serif;
+	font-size: 1.4em;
+}
+header {
+	text-align: center;
+	padding: 20px 0;
+}
+footer {
+	padding: 20px 0;
+}
+nav {
+	text-align: center;
+}
 .embed-container {
     position: relative;
     padding-bottom: 56.25%; /* 16/9 ratio */
@@ -820,8 +835,57 @@ table td {
     height: 100%;
 }
 
+
+section {
+	border: 1px solid #000;
+	margin: 10px 0;
+	padding: 10px;
+	/*color: #ffffff;*/
+}
+#wrapper {
+    background-color: #fff;
+    padding: 0 40px;
+}
+
+/*#apropos {
+	background-color: #e39700;
+}
+#player {
+	background-color: #e3bc00
+}
+#matos {
+	background-color: #e36700;	
+}*/
+h2 {
+	color: #000000;
+	font-size: 1.8571em; /* equiv 26px */
+	font-weight: 700;
+	line-height: 1.6154em;
+	margin: .8077em 0 0 0;
+	text-transform: uppercase;
+}
+/*strong {
+	color: #000000;
+	font-size: 0.9em;
+}*/
+
+
+/* MOBILE */
 @media (max-width: 640px) {
-  .player {
-    height: 310px;
+	#wrapper {
+	    padding: 0 20px;
+	}
+  	.player {
+    	height: 310px;
+  	}
+}
+@media (max-width: 420px) {
+	#wrapper {
+	    padding: 0 10px;
+	}
+}
+@media (min-width: 641px) {
+  body {
+    /*background: url(../images/bg.jpg) center top no-repeat fixed;*/
   }
 }
