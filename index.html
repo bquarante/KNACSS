@@ -10,7 +10,21 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="css/knacss.css" media="all">
 	<link rel="stylesheet" href="css/nav.css" media="all">
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<!-- <link rel="stylesheet" href="css/style.css" media="all"> -->
+	<script>
+		$(document).ready(function() {
+			$("#navigation li a").click(function(){
+				var target = "#" + $(this).attr("title");
+				var targetPos = ($(target).position().top) - 150;
+				console.log(targetPos);
+				$('html, body').animate({ scrollTop:targetPos }, 'slow');
+					return false;
+				
+				// $("body").scrollTop(targetPos)
+			});
+		});
+	</script>
 </head>
 <body>
 	
@@ -21,13 +35,14 @@
 				<h2 class="h6-like mt0 mb0">ingénieur du son</h2>
 			</header>
 			<nav id="navigation" class="line" role="navigation">
+				<label for="toggle-menu" data-icon="≡" title="menu" role="navigation" onclick=""></label><input type="checkbox" id="toggle-menu">
 				<ul>
-					<li><a href="#apropos">A propos</a></li>
-					<li><a href="#player">Player</a></li>
-					<li><a href="#enregistrementnomade">Enregistrement nomade</a></li>
-					<li><a href="#tarifs">Tarifs</a></li>
-					<li><a href="#matos">Matériel</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a title="apropos">A propos</a></li>
+					<li><a title="player">Player</a></li>
+					<li><a title="enregistrementnomade">Enregistrement nomade</a></li>
+					<li><a title="tarifs">Tarifs</a></li>
+					<li><a title="matos">Matériel</a></li>
+					<li><a title="contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>

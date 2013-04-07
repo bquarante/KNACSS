@@ -4,6 +4,7 @@ Attention : ne fonctionne pas toujours très bien sur les anciens navigateurs ou
 label[for^="toggle"],
 [type="checkbox"] {
 	cursor: pointer;
+	display: none;
 }
 label[for^="toggle"] + [type="checkbox"] { display: none; }
 
@@ -34,7 +35,11 @@ label[for^="toggle"] + [type="checkbox"] { display: none; }
 @media (max-width: 640px) {
 	/* unicode character for button */
 	[data-icon]:before { content: attr(data-icon); }
-
+	label[for^="toggle"],
+	[type="checkbox"] {
+		cursor: pointer;
+		display: block;
+	}
 	/* styling menu button */
 	label[for^="toggle"] {
 		position: absolute;
