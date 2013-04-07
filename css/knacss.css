@@ -816,10 +816,10 @@ body {
 	box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
     /*background-image: url('../images/debut_light.png');*/
     /* retina_wood - pyramid - cream_dust - subtlenet2 - grid_noise - chruch  */
-    background-image: url('http://subtlepatterns.com/patterns/texturetastic_gray.png');
+    background-image: url('../images/texturetastic_gray.png');
 }
 #topwrap-fix {
-	background-image: url('http://subtlepatterns.com/patterns/texturetastic_gray.png');
+	background-image: url('../images/texturetastic_gray.png');
 	border-bottom: thin solid #aaa;
 	padding: 0px 80px 15px;
 	position: fixed;
