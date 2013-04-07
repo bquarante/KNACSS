@@ -811,7 +811,27 @@ body {
 	font-family: 'Arvo', sans-serif;
 	font-size: 1.4em;
 }
+#wrapper {
+	-webkit-box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
+	box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
+    /*background-image: url('../images/debut_light.png');*/
+    /* retina_wood - pyramid - cream_dust - subtlenet2 - grid_noise - chruch  */
+    background-image: url('http://subtlepatterns.com/patterns/texturetastic_gray.png');
+}
+#topwrap-fix {
+	background-image: url('http://subtlepatterns.com/patterns/texturetastic_gray.png');
+	border-bottom: thin solid #aaa;
+	padding: 0px 80px 15px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+#spacer {
+	height: 130px;
+}
 header {
+	/*color: rgb(129, 79, 79);*/
 	text-align: center;
 	padding: 20px 0;
 }
@@ -823,7 +843,7 @@ header h2 {
 	text-transform: uppercase;
 }
 footer {
-	line-height: 1.4;
+	line-height: 1.6;
 	padding: 20px 0;
 }
 
@@ -836,31 +856,30 @@ section {
 	border-top: 8px solid #000;
 	-webkit-box-shadow:  0px 0px 10px 0px rgba(150, 150, 150, 1);
 	box-shadow:  0px 0px 10px 0px rgba(150, 150, 150, 1);
-	margin: 20px 0;
+	margin: 20px 80px;
 	padding: 10px 20px 20px;
 	zoom:1;
 
 }
-#wrapper {
-	-webkit-box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
-	box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
-    /*background-image: url('../images/debut_light.png');*/
-    /* retina_wood - pyramid - cream_dust - subtlenet2 - grid_noise - chruch  */
-    background-image: url('http://subtlepatterns.com/patterns/texturetastic_gray.png');
-    padding: 0 80px;
-}
-
 /* COMMON */
-
-section a {
+section h3 {
+	/*color: rgb(129, 79, 79);*/
+	/*font-weight: 700;*/
+	font-style: italic;
+	/*padding-left: 0.4em;*/
+	text-transform: uppercase;	
+}
+a {
 	border-bottom: 2px solid #000;
 	color: #000;
 	padding: 0;
 	text-decoration: none;
 }
-section a:hover {
+
+a:hover {
 	background-color: #000;
 	color: #fff;
+	font-size: 0.9em;
 	font-weight: 700;
 	padding: 2px 4px;
 }
@@ -897,30 +916,13 @@ section a:hover {
 .player-bloc iframe {
 	border: 2px solid #fff;
 }
-/*
-#apropos h2 {
-	background-color: #1A202C;
+.social a {
+	border: none;
 }
-#player h2 {
-	background-color: #1F7872
-}
-#enregistrementnomade h2 {
-	background-color: #72B095
-}
-#tarifs h2 {
-	background-color: #DEDBA7
-}
-#matos h2 {
-	background-color: #D13F31;	
-}*/
-section h3 {
+.social a:hover {
+	background-color: transparent;
 	color: #000;
-	/*font-weight: 700;*/
-	font-style: italic;
-	/*padding-left: 0.4em;*/
-	text-transform: uppercase;	
 }
-
 .icon {
 	display: inline-block;
 	height: 40px;
@@ -929,21 +931,45 @@ section h3 {
 
 /* MOBILE & TABLET */
 @media (max-width: 960px) {
-	#wrapper {
-	    padding: 0 40px;
+	/*#wrapper {
+	    padding: 140px 0 40px;
+	}*/
+	section {
+		margin: 20px 40px;
+	}
+	#topwrap-fix {
+		padding: 0px 40px 20px;
 	}
 }
 @media (max-width: 640px) {
-	#wrapper {
-	    padding: 0 20px;
-	}
+	/*#wrapper {
+	    padding: 140px 0 20px;
+	}*/
   	.player {
     	height: 310px;
   	}
+  	section {
+		margin: 20px 20px;
+	}
+	#topwrap-fix {
+		padding: 0px 20px;
+	}
+	#spacer {
+		height: 90px;
+	}
 }
 @media (max-width: 420px) {
-	#wrapper {
-	    padding: 0 10px;
+	/*#wrapper {
+	    padding: 140px 0 10px;
+	}*/
+	section {
+		margin: 20px 10px;
+	}
+	#topwrap-fix {
+		padding: 0px 10px;
+	}
+	#spacer {
+		height: 90px;
 	}
 }
 @media (min-width: 641px) {
