@@ -354,17 +354,6 @@ source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
 
 .desktop-hidden { display: none; } /* hidden on desktop */
 
-/* ----------------------------- */
-/* ==header */
-/* ----------------------------- */
-
-/* ----------------------------- */
-/* ==sidebar */
-/* ----------------------------- */
-
-/* ----------------------------- */
-/* ==footer */
-/* ----------------------------- */
 
 /* ----------------------------- */
 /* ==forms */
@@ -761,7 +750,7 @@ input[type='submit']::-moz-focus-inner {
 /* ----------------------------- */
 /* ==tables                      */
 /* ----------------------------- */
-
+/*
 table,
 .table {
 	display: table;
@@ -796,15 +785,12 @@ table td {
 }
 table td {
 	color: #555;
-}
+}*/
 
 
 /*----------------------------------------------------------------------------------*/
 /* STRUCTURE */
 
-html {
-
-}
 body {
 	background: #2c2c2c url('http://subtlepatterns.com/patterns/dark_Tire.png'); /* dark_Tire */
 	background-attachment: fixed; 
@@ -831,13 +817,14 @@ body {
 	height: 130px;
 }
 header {
-	/*color: rgb(129, 79, 79);*/
+	background: url(../images/portrait.png) 0 0 no-repeat;
 	text-align: center;
 	padding: 20px 0;
 }
 header h1 {
 	font-size: 240%;
 	font-weight: bold;
+	text-shadow: -3px 1px 0px #e4e4e4;
 }
 header h2 {
 	text-transform: uppercase;
@@ -852,7 +839,6 @@ section {
 	background-color:rgba(255,255,255,0.4);
 	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#66ffffff);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#66ffffff);
-
 	border-top: 8px solid #000;
 	-webkit-box-shadow:  0px 0px 10px 0px rgba(150, 150, 150, 1);
 	box-shadow:  0px 0px 10px 0px rgba(150, 150, 150, 1);
@@ -861,12 +847,9 @@ section {
 	zoom:1;
 
 }
-/* COMMON */
+/* --- COMMON --- */
 section h3 {
-	/*color: rgb(129, 79, 79);*/
-	/*font-weight: 700;*/
 	font-style: italic;
-	/*padding-left: 0.4em;*/
 	text-transform: uppercase;	
 }
 a {
@@ -875,7 +858,6 @@ a {
 	padding: 0;
 	text-decoration: none;
 }
-
 a:hover {
 	background-color: #000;
 	color: #fff;
@@ -883,7 +865,11 @@ a:hover {
 	font-weight: 700;
 	padding: 2px 4px;
 }
-/* VIDEO */
+ul, li {
+	list-style: none;
+}
+/* --- VIDEO --- */
+
 .embed-container {
 	border: 2px solid #000;
     position: relative;
@@ -908,6 +894,9 @@ a:hover {
 	display: block;
 	padding: 15px;
 }
+
+/* --- PLAYER --- */
+
 .player-bloc {
 	border: 2px solid #000;
 	line-height: 0;
@@ -929,22 +918,123 @@ a:hover {
 	width: 40px;
 }
 
+/* --- MATOS --- */
+#matos ul li {
+	font-weight: bold;
+}
+#matos ul li ul li {
+	font-size: .8571em; /* equiv 10px */
+	font-weight: normal;
+}
+/* font-size: .8571em; /*
+
+/* --- NAVIGATION --- */
+
+label[for^="toggle"], [type="checkbox"] {
+	cursor: pointer;
+	display: none;
+}
+label[for^="toggle"] + [type="checkbox"] { display: none; }
+
+#navigation ul {
+	background: #000;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#navigation li { display: inline; }
+#navigation li a {
+	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: .1em .5em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#navigation li a:hover,
+#navigation li a:active {
+	background: #fff;
+	color: #000;
+	font-weight: bold;
+	/*text-decoration: underline;*/
+}
+
+@media (max-width: 640px) {
+	/* unicode character for button */
+	[data-icon]:before {
+		content: attr(data-icon);
+	}
+	label[for^="toggle"], [type="checkbox"] {
+		cursor: pointer;
+		display: block;
+	}
+	/* styling menu button */
+	label[for^="toggle"] {
+		position: absolute;
+			top: 7px; right: 4px;
+		z-index: 1337;
+		padding: .1em .25em;
+		font-size: 3.8em;
+		font-weight: bold;
+		line-height: .7em;
+		background-color: #444;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, .3);
+		border-radius: 4px;
+		color: #fff;
+	}
+
+	/* handling click/tap with CSS3 target */
+	#toggle-menu:checked + ul {
+		max-height: 30em !important; 
+	}
+
+	/* styling navigation items */
+	#navigation ul {
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: max-height .4s;
+		-moz-transition: max-height .4s;
+		-o-transition: max-height .4s;
+		-ms-transition: max-height .4s;
+		transition: max-height .4s;
+	}
+	#navigation li a {
+		display: block;
+		padding: .9em .6em;
+		border: 0; border-top: 1px solid #aaa;
+		font-size: 1.1em;
+	}
+	#navigation li a:before {
+		content: "›";
+		font-size: 1.2em;
+		margin-right: .6em;
+		line-height: 1;
+	}
+	#navigation li:last-child a {
+		border-bottom: 1px solid #aaa;
+	}
+	#navigation li a:hover,
+	#navigation li a:active {
+		text-decoration: none;
+	}
+}
+
 /* MOBILE & TABLET */
 @media (max-width: 960px) {
-	/*#wrapper {
-	    padding: 140px 0 40px;
-	}*/
+
 	section {
 		margin: 20px 40px;
 	}
 	#topwrap-fix {
-		padding: 0px 40px 20px;
+		padding: 0px 40px 15px;
 	}
 }
 @media (max-width: 640px) {
-	/*#wrapper {
-	    padding: 140px 0 20px;
-	}*/
+	header {
+		background-position: -30px 0;
+	}
   	.player {
     	height: 310px;
   	}
@@ -959,9 +1049,9 @@ a:hover {
 	}
 }
 @media (max-width: 420px) {
-	/*#wrapper {
-	    padding: 140px 0 10px;
-	}*/
+	header {
+		background-position: -70px 0;
+	}
 	section {
 		margin: 20px 10px;
 	}
@@ -971,9 +1061,4 @@ a:hover {
 	#spacer {
 		height: 90px;
 	}
-}
-@media (min-width: 641px) {
-  body {
-    /*background: url(../images/bg.jpg) center top no-repeat fixed;*/
-  }
 }
