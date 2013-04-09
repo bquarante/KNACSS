@@ -998,11 +998,13 @@ ul, li {
 	.player { height: 310px; }
 	
 }
-@media (max-width: 420px) {
+@media (max-width: 320px) {
 
-	header { background-position: -70px 0;}
+	header { background-image: -70px 0;}
 	#spacer { height: 125px; }
-	#topwrap-fix { padding: 0px 10px 10px;}
+	#topwrap-fix {
+		padding: 0px 10px 10px;
+		}
 	section { margin: 20px 10px; }
 
 }
