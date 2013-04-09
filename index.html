@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="initial-scale=1.0">
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="css/knacss.css" media="all">
@@ -13,15 +13,57 @@
 	<!-- <link rel="stylesheet" href="css/style.css" media="all"> -->
 	<script>
 		$(document).ready(function() {
-			$("#navigation li a").click(function(){
-				var target = "#" + $(this).attr("title");
-				var targetPos = ($(target).position().top) - 150;
-				console.log(targetPos);
-				$('html, body').animate({ scrollTop:targetPos }, 'slow');
-					return false;
-				
-				// $("body").scrollTop(targetPos)
+
+			$(window).resize(function() {
+				$windowWidth = $(window).width();
+				//console.log($windowWidth);
+				if($windowWidth >= 640){
+					$("#navigation ul").css({'height' : 'auto'})
+				}else{
+					$("#navigation ul").css({'height' : '0'})
+				}
 			});
+
+			$navMobile = false;
+
+			$("#navigation li a").click(function(){
+				var spacer = $("#spacer").css('height');
+				var spacerNb = Number(spacer.substr(0, spacer.length -2)) + 20;
+				var target = "#" + $(this).attr("title");
+				var targetPos = ($(target).position().top) - spacerNb;
+				// console.log(spacerNb);
+				$('html, body').animate({ scrollTop:targetPos }, 'slow');
+
+				if ($navMobile == true) {
+					$("#navigation ul").animate({
+						'height' : '0px'
+					},600, function(){
+						$("#nav-mobile").html('Menu &#9660;');
+						$navMobile = false;
+					})
+				};
+
+				return false;				
+			});
+
+			$("#nav-mobile").click(function(){
+				if ($navMobile == false) {
+					$("#navigation ul").animate({
+						'height' : '255px'
+					},600, function(){
+						$("#nav-mobile").html('Menu &#9650;');
+						$navMobile = true;
+					})
+				} else if ($navMobile == true) {
+					$("#navigation ul").animate({
+						'height' : '0px'
+					},600, function(){
+						$("#nav-mobile").html('Menu &#9660;');
+						$navMobile = false;
+					})
+				}
+			});
+			
 		});
 	</script>
 </head>
@@ -34,7 +76,7 @@
 				<h2 class="h6-like mt0 mb0">ingénieur du son</h2>
 			</header>
 			<nav id="navigation" class="line" role="navigation">
-				<label for="toggle-menu" data-icon="≡" title="menu" role="navigation" onclick=""></label><input type="checkbox" id="toggle-menu">
+				<div id="nav-mobile">Menu <span class ="small">&#9660;</span></div>
 				<ul>
 					<li><a title="apropos">A propos</a></li>
 					<li><a title="player">Player</a></li>
@@ -140,18 +182,18 @@
 			<div class="line"><h3>Matériel</h3></div>
 				<div class="">
 					<ul class="mod left w50 medium-w50 tiny-w100">
-						<li>Recorder
+						<li><strong>Recorder</strong>
 							<ul>
 								<li>Magix Samplitude 11 Pro</li>
 							</ul>
 						</li>
-						<li>Interfaces
+						<li><strong>Interfaces</strong>
 							<ul>
 								<li>Carte son RME Fireface 800</li>
 								<li>Convertisseur AD/DA 24 canaux SSL Alphalink AX</li>
 							</ul>
 						</li>
-						<li>Mixer
+						<li><strong>Mixer</strong>
 							<ul>
 								<li>Sommateur analogique 16 canaux API</li>
 								<li>API 8200 x2</li>
@@ -159,13 +201,13 @@
 								<li>Phoenix Audio NICERIZER 8</li>
 							</ul>
 						</li>
-						<li>Monitoring
+						<li><strong>Monitoring</strong>
 							<ul>
 								<li>Dynaudio Acoustics BM15A</li>
 								<li>Adam A7</li>
 							</ul>
 						</li>
-						<li>Preamps/DI's
+						<li><strong>Preamps/DI's</strong>
 							<ul>
 								<li>Summit TPA200B (tube, stéréo) x1</li>
 								<li>Aurora Audio GTP8 (Neve 1073 preamps reissue)</li>
@@ -173,14 +215,14 @@
 								<li>DI Avalon U5 x3</li>
 							</ul>
 						</li>
-						<li>Equalizers
+						<li><strong>Equalizers</strong>
 							<ul>
 								<li>Millenia NSEQ2 (tube, stéréo) x1</li>
 								<li>Summit EQP200B (tube, stereo) x1</li>
 								<li>API 550B x2</li>
 							</ul>
 						</li>
-						<li>Processeurs de dynamique
+						<li><strong>Processeurs de dynamique</strong>
 							<ul>
 								<li>Chiswick Reach Stereo Valve Compressor (Fairchild) (tube, stereo) x1</li>
 								<li>Manley ELOP (tube, stéréo) x1</li>
@@ -189,7 +231,7 @@
 						</li>
 					</ul>
 					<ul class="mod left w50 medium-w50 tiny-w100 ma0">
-						<li>Micros
+						<li><strong>Micros</strong>
 							<ul>
 								<li>Wunder Audio CM7 (neumann U47 long body reissue)</li>
 								<li>Royer R121 (ruban, appairées) x2</li>
@@ -204,7 +246,7 @@
 								<li>Sennheiser MD421 x1</li>
 							</ul>
 						</li>
-						<li>Backline
+						<li><strong>Backline</strong>
 							<ul>
 								<li>Batterie DW fûts Maple Keller 24”x16”, 12”x11”, 16”x14”</li>
 								<li>Caisse claire Sonor Artist Brass 14”x5,5”</li>
@@ -212,7 +254,7 @@
 								<li>Baffle 4x10” Rickenbaker openback</li>
 							</ul>
 						</li>
-						<li>Divers
+						<li><strong>Divers</strong>
 							<ul>
 								<li>Presonus Monitor Station</li>
 								<li>Boitier de réamplification Radial X-AMP x2</li>
