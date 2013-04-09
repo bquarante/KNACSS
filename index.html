@@ -27,18 +27,18 @@
 			$navMobile = false;
 
 			$("#navigation li a").click(function(){
-				var spacer = $("#spacer").css('height');
-				var spacerNb = Number(spacer.substr(0, spacer.length -2)) + 20;
+				var wrapPadTop = $("#wrapper").css('padding-top');
+				var wrapPadTopNb = Number(wrapPadTop.substr(0, wrapPadTop.length -2)-10);
 				var target = "#" + $(this).attr("title");
-				var targetPos = ($(target).position().top) - spacerNb;
-				// console.log(spacerNb);
+				var targetPos = ($(target).position().top) - wrapPadTopNb;
+
 				$('html, body').animate({ scrollTop:targetPos }, 'slow');
 
 				if ($navMobile == true) {
 					$("#navigation ul").animate({
 						'height' : '0px'
 					},600, function(){
-						$("#nav-mobile").html('Menu &#9660;');
+						$("#navdrop").html('Menu <span class ="small">&#9660;</span>');
 						$navMobile = false;
 					})
 				};
@@ -46,19 +46,20 @@
 				return false;				
 			});
 
-			$("#nav-mobile").click(function(){
+			$("#navdrop").click(function(){
+				console.log('yo')
 				if ($navMobile == false) {
 					$("#navigation ul").animate({
-						'height' : '255px'
+						'height' : '197px'
 					},600, function(){
-						$("#nav-mobile").html('Menu &#9650;');
+						$("#navdrop").html('Menu <span class="small">&#9650;</span>');
 						$navMobile = true;
 					})
 				} else if ($navMobile == true) {
 					$("#navigation ul").animate({
 						'height' : '0px'
 					},600, function(){
-						$("#nav-mobile").html('Menu &#9660;');
+						$("#navdrop").html('Menu <span class ="small">&#9660;</span>');
 						$navMobile = false;
 					})
 				}
@@ -68,15 +69,24 @@
 	</script>
 </head>
 <body>
-	
+	<!-- responsive adjustment -->
 	<div id="wrapper" class="mw960p center">
-		<div id="topwrap-fix" class="mw960p center">
+		<!-- <div id="nav-mobile">
+			<div class="left">
+				<h1 class="mb0 mt0">Sylvain Biguet</h1>
+				<h2 class="h6-like mt0 mb0">ingénieur du son</h2>
+			</div>
+			<div class="right">
+				Menu <span class ="small">&#9660;</span>
+			</div>
+		</div> -->
+		<div id="wraptop" class="mw960p center">
 			<header role="banner" class="line">
 				<h1 class="mb0 mt0">Sylvain Biguet</h1>
 				<h2 class="h6-like mt0 mb0">ingénieur du son</h2>
 			</header>
+			<div id="navdrop">Menu <span class ="small">&#9660;</span></div>
 			<nav id="navigation" class="line" role="navigation">
-				<div id="nav-mobile">Menu <span class ="small">&#9660;</span></div>
 				<ul>
 					<li><a title="apropos">A propos</a></li>
 					<li><a title="player">Player</a></li>
@@ -87,7 +97,6 @@
 				</ul>
 			</nav>
 		</div>
-		<section id="spacer"></section>
 		<section id="apropos" class="line">
 			<div class="line"><h3>A propos</h3></div>
 			<div class="line">
@@ -106,7 +115,7 @@
 					<p class="video-text"><strong>Tout mon travail est là. En m’appuyant sur un matériel délibérément inscrit dans l’histoire du son, je propose l’accès à une réelle identité sonore.</strong></p>
 				</div>
 				<div class="mod left w40 medium-w100 tiny-w100">
-					<p>Pour en savoir plus, lisez cette interview : <a href="http://www.coreandco.fr/interviews/sylvain-biguet-200.html">http://www.coreandco.fr/interviews/sylvain-biguet-200.html</a></p>
+					<p>Pour en savoir plus, lisez <a href="http://www.coreandco.fr/interviews/sylvain-biguet-200.html">cette interview</a></p>
 				</div>
 			</div>
 		</section>
@@ -118,7 +127,7 @@
 					<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265791&auto_play=false&show_artwork=true&color=000000"></iframe>
 				</div>
 			</div>
-			<div id="player" class="mod w50 left medium-w50 tiny-w100">
+			<div class="mod w50 left medium-w50 tiny-w100">
 				Hardcore, Metal, Rock
 				<div class="player-bloc">
 					<iframe class="player" width="100%" height="450" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1265787&auto_play=false&show_artwork=true&color=000000"></iframe>
