@@ -38,7 +38,7 @@ hgroup {
 }
 h1, .h1-like {
 	font-size: 1.8571em; /* equiv 26px */
-	font-weight: normal;
+	/*font-weight: normal;*/
 	line-height: 1.6154em;
 	margin: .8077em 0 0 0;
 }
@@ -50,7 +50,7 @@ h1, .h1-like {
 }*/
 h3, .h3-like {
 	font-size: 1.5714em; /* equiv 22px */
-	font-weight: normal;
+	/*font-weight: normal;*/
 	line-height: 1.909em;
 	margin: .9545em 0 0 0;
 }
@@ -793,23 +793,51 @@ body {
 	background: #2c2c2c url('../images/dark_Tire.png'); /* dark_Tire */
 	background-attachment: fixed; 
 	color: #333;
-	/*font-family: 'CreteRoundRegular', sans-serif;*/
+	font-family: 'BitterRegular', sans-serif; /* CreteRoundRegular */ 
+	font-weight: normal;
 	font-size: 1.5em;
 }
 @font-face {
-	font-family: 'CreteRoundRegular';
-	src: url('../fonts/CreteRound-Regular.eot');
-	src: url('../fonts/CreteRound-Regular.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/CreteRound-Regular.woff') format('woff'),
-	url('../fonts/CreteRound-Regular.otf') format('opentype'),
-	url('../fonts/CreteRound-Regular.svg#CreteRoundRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'BitterRegular';
+    src: url('../fonts/Bitter-Regular-webfont.eot');
+    src: url('../fonts/Bitter-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Bitter-Regular-webfont.woff') format('woff'),
+         url('../fonts/Bitter-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Bitter-Regular-webfont.svg#BitterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+@font-face {
+    font-family: 'BitterItalic';
+    src: url('../fonts/Bitter-Italic-webfont.eot');
+    src: url('../fonts/Bitter-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Bitter-Italic-webfont.woff') format('woff'),
+         url('../fonts/Bitter-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Bitter-Italic-webfont.svg#BitterItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BitterBold';
+    src: url('../fonts/Bitter-Bold-webfont.eot');
+    src: url('../fonts/Bitter-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Bitter-Bold-webfont.woff') format('woff'),
+         url('../fonts/Bitter-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Bitter-Bold-webfont.svg#BitterBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 strong, h1, h2, h3, h4 {
 	color: #000;
+	font-family: 'BitterBold';
+	font-weight: normal;
 }
+
+
 #wrapper {
+	border-left: inset 3px solid #da4a4a;
+	border-right: inset 3px solid #da4a4a;
 	-webkit-box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
 	box-shadow:  0px 0px 40px 15px rgb(0, 0, 0);
     /*background-image: url('../images/debut_light.png');*/
@@ -834,7 +862,8 @@ header {
 }
 header h1 {
 	font-size: 240%;
-	font-weight: 700;
+	font-family: 'BitterBold';
+	font-weight: normal;
 }
 header h2 {
 	text-transform: uppercase;
@@ -849,7 +878,10 @@ section {
 	background-color:rgba(255,255,255,0.4);
 	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#66ffffff);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#66ffffff);
+	-webkit-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
 	border-top: 8px solid #000;
+	border-bottom: none;
 	-webkit-box-shadow:  0px 0px 10px 0px rgba(150, 150, 150, 1);
 	box-shadow:  0px 0px 10px 0px rgba(150, 150, 150, 1);
 	margin: 20px 80px;
@@ -859,23 +891,32 @@ section {
 #navdrop { display: none; }
 
 /* --- COMMON --- */
+
 section h3 {
-	font-style: italic;
-	/*line-height: 1;*/
+	font-family: 'BitterItalic';
 	text-transform: uppercase;	
 }
+section:hover {
+	-webkit-border-radius: 0px 0px 15px 15px;
+	border-radius: 15px 15px 15px 15px;
+	border-bottom: 8px solid #000;
+}
+section:hover h3{
+	color: #da4a4a;
+	text-decoration: underline;
+}
 a {
-	border-bottom: 2px solid #000;
+	border-bottom: 3px solid #000;
 	color: #000;
 	padding: 0;
 	text-decoration: none;
 }
 a:hover {
-	background-color: rgb(218, 74, 74);
+	background-color: #da4a4a;
+	border-bottom: none;
 	color: #fff;
-	font-size: 0.9em;
-	font-weight: 700;
-	padding: 2px 4px;
+	/*font-size: 0.9em;*/
+	padding: 4px 2px;
 }
 ul, li {
 	list-style: none;
@@ -905,8 +946,12 @@ ul, li {
 	display: block;
 	padding: 15px;
 }
+.video-text:hover {
+	background-color: #da4a4a;
+}
 .video-text strong {
 	color: #fff;
+	font-weight: normal;
 }
 /* --- PLAYER --- */
 
